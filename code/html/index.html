@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Netflix</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://assets.nflxext.com/ffe/siteui/vlv3/2e5ed3a5-40f4-4970-9fc4-90c66f3e3f24/1cfb3bba-7f23-4de2-9730-cd47600458a2/BR-pt-20240520-popsignuptwoweeks-perspective_alpha_website_large.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 1); /* fundo preto sólido */
+      z-index: 0;
+    }
+
+    .login-container {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 60px 68px 40px;
+      width: 100%;
+      max-width: 450px;
+      z-index: 1;
+      position: relative;
+      border-radius: 4px;
+    }
+
+    .login-container h1 {
+      color: #fff;
+      margin-bottom: 28px;
+      font-size: 32px;
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 16px;
+      background: #333;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 16px;
+      background-color: #e50914;
+      color: white;
+      border: none;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-container .extra-options {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #b3b3b3;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .login-container .signup {
+      margin-top: 40px;
+      color: #737373;
+      font-size: 16px;
+    }
+
+    .login-container .signup a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      width: 150px;
+      z-index: 2;
+    }
+
+    @media screen and (max-width: 600px) {
+      .login-container {
+        padding: 40px 20px;
+      }
+
+      .logo {
+        width: 120px;
+        left: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <img src="../src/images/Made with insMind-png-clipart-f-type-logos-for-sale-black-and-red-f-logo-thumbnail.png" alt="Netflix" class="logo">
+
+  <div class="login-container">
+    <h1>Entrar</h1>
+    <form action="#">
+      <input type="email" placeholder="Email ou número de telefone" required>
+      <input type="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+      <div class="extra-options">
+        <label><input type="checkbox"> Lembre-se de mim</label>
+        <a href="#" style="color: #b3b3b3;">Precisa de ajuda?</a>
+      </div>
+    </form>
+    <div class="signup">
+      Novo por aqui? <a href="#">Assine agora</a>.
+    </div>
+  </div>
+</body>
+</html>
+
